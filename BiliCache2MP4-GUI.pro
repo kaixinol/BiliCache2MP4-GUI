@@ -1,6 +1,6 @@
 QT += widgets network
 
-CONFIG += c++17
+CONFIG += c++23
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -16,9 +16,10 @@ HEADERS += \
 FORMS += \
     mainwindow.ui
 
-TRANSLATIONS +=
 CONFIG += lrelease
-CONFIG += embed_translations
+
+GIT_VERSION = $$system(git describe --tags --always)
+DEFINES += APP_VERSION=\\\"$$GIT_VERSION\\\"
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
