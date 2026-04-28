@@ -42,7 +42,6 @@
          </property>
         </widget>
        </item>
-
        <item row="1" column="0">
         <widget class="QLabel" name="labelFfmpeg">
          <property name="text">
@@ -64,7 +63,6 @@
          </property>
         </widget>
        </item>
-
        <item row="2" column="0">
         <widget class="QLabel" name="labelOutput">
          <property name="text">
@@ -86,7 +84,6 @@
          </property>
         </widget>
        </item>
-
        <item row="3" column="0">
         <widget class="QLabel" name="labelThread">
          <property name="text">
@@ -110,7 +107,7 @@
        <item row="3" column="2">
         <spacer name="horizontalSpacerTopRight">
          <property name="orientation">
-          <enum>Qt::Horizontal</enum>
+          <enum>Qt::Orientation::Horizontal</enum>
          </property>
          <property name="sizeHint" stdset="0">
           <size>
@@ -120,7 +117,6 @@
          </property>
         </spacer>
        </item>
-
        <item row="4" column="0" colspan="3">
         <layout class="QHBoxLayout" name="horizontalLayoutOptions">
          <item>
@@ -133,12 +129,18 @@
          <item>
           <widget class="QCheckBox" name="checkBoxDanmaku">
            <property name="text">
-            <string>转换弹幕 .xml → .ass</string>
+            <string>转换弹幕（xml到ass）</string>
            </property>
           </widget>
          </item>
          <item>
           <widget class="QCheckBox" name="checkBoxNfo">
+           <property name="cursor">
+            <cursorShape>WhatsThisCursor</cursorShape>
+           </property>
+           <property name="toolTip">
+            <string notr="true">NFO 文件（Information）是一种包含了电影、剧集或软件详细元数据（如演员、导演、简介、海报链接）的文本文件。</string>
+           </property>
            <property name="text">
             <string>生成 nfo</string>
            </property>
@@ -147,7 +149,7 @@
          <item>
           <spacer name="horizontalSpacerOptions">
            <property name="orientation">
-            <enum>Qt::Horizontal</enum>
+            <enum>Qt::Orientation::Horizontal</enum>
            </property>
            <property name="sizeHint" stdset="0">
             <size>
@@ -162,7 +164,6 @@
       </layout>
      </widget>
     </item>
-
     <item>
      <widget class="QGroupBox" name="groupBoxAction">
       <property name="title">
@@ -171,9 +172,6 @@
       <layout class="QHBoxLayout" name="horizontalLayoutAction">
        <item>
         <widget class="QPushButton" name="pushButtonStart">
-         <property name="minimumHeight">
-          <number>36</number>
-         </property>
          <property name="text">
           <string>开始转换</string>
          </property>
@@ -181,9 +179,6 @@
        </item>
        <item>
         <widget class="QPushButton" name="pushButtonClearLog">
-         <property name="minimumHeight">
-          <number>36</number>
-         </property>
          <property name="text">
           <string>清空日志</string>
          </property>
@@ -192,7 +187,7 @@
        <item>
         <spacer name="horizontalSpacerAction">
          <property name="orientation">
-          <enum>Qt::Horizontal</enum>
+          <enum>Qt::Orientation::Horizontal</enum>
          </property>
          <property name="sizeHint" stdset="0">
           <size>
@@ -205,7 +200,6 @@
       </layout>
      </widget>
     </item>
-
     <item>
      <widget class="QProgressBar" name="progressBar">
       <property name="value">
@@ -219,7 +213,6 @@
       </property>
      </widget>
     </item>
-
     <item>
      <widget class="QGroupBox" name="groupBoxLog">
       <property name="title">
